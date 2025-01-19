@@ -1,0 +1,45 @@
+#include <iostream>
+#include <vector>
+#include <cstring> 
+using namespace std;
+
+class Solution {
+public:
+    vector<string> commonChars(vector<string>& words) {
+        vector<string> result;
+        if (words.size() == 0){
+            return result;
+        }
+
+        int hash [26] = {0};
+        for (int i = 0; i< words[0].size(); i++){
+            hash[words[0][i] -'a']++;
+        }
+
+        int hash_otherwords [26] = {0};
+        
+        for (int i = 1; i < words.size(); i++){
+           memset (hash_otherwords, 0, 26* sizeof(int));
+           for (int j = 0; j< words[i].size();j ++){
+            hash_otherwords[words[i][j] -'a']++;
+           }
+
+           for(int k = 0; k<26; k++){
+            hash[k] = min(hash[k],hash_otherwords[k]);
+           }
+        }
+
+        for (int i = 0;i<26;i++){
+            //可能出现超过1的数值。
+            while (hash[i] != 0){
+                //长度为1， ASCII值是i+'a', 如果 i = 0，结果是 'a'。如果 i = 1，结果是 'b'。如果 i = 25，结果是 'z'。
+                string s(1, i+'a');
+                result.push_back(s);
+                hash[i]--;
+            }
+        }
+        return result;
+
+        
+    }
+};

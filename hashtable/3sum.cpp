@@ -8,7 +8,6 @@
 #include <algorithm>
 
 using namespace std;
-
 class Solution {
 public:
     vector<vector<int>> threeSum(vector<int>& nums) {
@@ -19,7 +18,7 @@ public:
             if(nums[i]> 0){
                 return result;  
             }
-            if (i> 0 && nums[i-1]){
+            if (i > 0 && nums[i] == nums[i - 1]) {
                 continue;
             }
             // 双指针
@@ -27,10 +26,10 @@ public:
             int right = nums.size() -1;
 
             while(right> left){
-                if(nums[1]+ nums[left]+ nums[right] > 0){
+                if(nums[i]+ nums[left]+ nums[right] > 0){
                     right --;
                 }
-                else if(nums[1]+ nums[left]+ nums[right] <0){
+                else if(nums[i]+ nums[left]+ nums[right] <0){
                     left ++;
                 }
                 else {

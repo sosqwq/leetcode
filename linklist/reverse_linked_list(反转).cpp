@@ -17,7 +17,7 @@ using namespace std;
 public:
     ListNode* swapPairs(ListNode* head) {
         ListNode * current = head;
-        ListNode * prev = nullptr;
+        ListNode * prev = nullptr; 
         ListNode * temp;
 
         while (current != nullptr){

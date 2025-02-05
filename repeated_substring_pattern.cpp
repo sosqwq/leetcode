@@ -11,11 +11,7 @@ public:
     bool repeatedSubstringPattern(string s) {
         string t = s +s ;
         t = t.substr(1,t.size()-2);
-
-        if(t.size() == 0){
-            return false;
-        }
-        else if(t.find(s) != string::npos){
+         if(t.find(s) != string::npos){
             return true;
         }
         

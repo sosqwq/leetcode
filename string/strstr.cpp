@@ -29,6 +29,20 @@ public:
         }
         vector<int> next(needle.size());
         getNext(&next[0], needle);
+        int j = -1;
+
+        for(int i= 0;i< haystack.size();i++){
+            while(haystack[i] != needle[j+1]&& j>=0){
+                j = next[j];
+            }
+            if(haystack[i] == needle[j+1]){
+                j++;
+            }
+            if(j == (needle.size() -1)){
+                return (i-needle.size()+1);
+            }
+        }
+        return -1;
 
     }
 };

@@ -5,16 +5,19 @@
 #include <unordered_map>
 #include <algorithm>
 #include <stack>
+#include <queue>
 using namespace std;
 
 class MyStack {
     public:
+    queue<int> que1;
+    queue<int> que2;
         MyStack() {
             
         }
         
         void push(int x) {
-            
+            que1.push(x);
         }
         
         int pop() {
@@ -26,7 +29,7 @@ class MyStack {
         }
         
         bool empty() {
-            
+            return que1.empty();
         }
     };
     

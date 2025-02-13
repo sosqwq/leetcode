@@ -10,26 +10,33 @@ using namespace std;
 
 class MyStack {
     public:
-    queue<int> que1;
-    queue<int> que2;
+    queue<int> que;
         MyStack() {
             
         }
         
         void push(int x) {
-            que1.push(x);
+            que.push(x);
         }
         
         int pop() {
-            
+            int size = que.size()-1;
+            while(size != 1){
+                que.push(que.front());
+                que.pop();
+                size--;
+            }
+            int result = que.front();
+            que.pop();
+            return result;
         }
         
         int top() {
-            
+            return que.back();
         }
         
         bool empty() {
-            return que1.empty();
+            return que.empty();
         }
     };
     

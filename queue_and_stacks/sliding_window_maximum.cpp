@@ -33,7 +33,7 @@ class Solution {
     public:
         
         vector<int> maxSlidingWindow(vector<int>& nums, int k) {
-            MyQueue que;
+            MyQueue que; 
             vector<int> result;
             // 先将k元素放进队列
             for(int i= 0; i<k;i++){

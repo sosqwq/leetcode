@@ -33,6 +33,5 @@ class Solution {
             vector<int> result;
             postOrder_traversal(root, result);
             return result;
-            
         }
     };

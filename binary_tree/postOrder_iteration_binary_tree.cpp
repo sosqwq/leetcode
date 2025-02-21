@@ -36,8 +36,5 @@ class Solution {
             }
             reverse(result.begin(),result.end());
             return result;
-
-            
-
         }
     };

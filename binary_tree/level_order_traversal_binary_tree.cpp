@@ -7,6 +7,9 @@
 #include <stack>
 #include <queue>
 
+using namespace std;
+
+
 struct TreeNode
 {
     int val;
@@ -28,7 +31,7 @@ using namespace std;class Solution {
             while(!que.empty()){
                 int size = que.size();
                 vector<int> vec;
-                while(size--){
+                for(int i=0;i<size;i++){
                     TreeNode* node;
                     node = que.front();
                     vec.push_back(node->val);

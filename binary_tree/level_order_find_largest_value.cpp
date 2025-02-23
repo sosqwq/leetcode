@@ -27,13 +27,14 @@ class Solution {
 
             while(! que.empty()){
                 int size = que.size();
-                int largest =0;
+                int largest = INT_MIN; //整数最小值
 
                 while(size--){
                     TreeNode * node = que.front();
                     if(largest < node ->val){
                         largest = node -> val;
                     }
+                    que.pop();
                     if(node -> left) que.push(node-> left);
                     if(node -> right) que.push(node-> right);
                 }

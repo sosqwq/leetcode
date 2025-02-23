@@ -8,6 +8,7 @@
         "string": "cpp",
         "algorithm": "cpp",
         "cstring": "cpp",
-        "functional": "cpp"
+        "functional": "cpp",
+        "level_order_average_of_binary_tree,cpp": "cpp"
     }
 }

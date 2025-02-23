@@ -40,8 +40,8 @@ class Solution {
                     else {
                         node = que.front();
                         que.pop();
-                        nodepre ->next = nodepre;
-                        nodepre = node -> next;
+                        nodepre ->next = node;
+                        nodepre = nodepre -> next;
                     }
                     if(node-> left) que.push(node-> left);
                     if(node -> right) que.push(node -> right);

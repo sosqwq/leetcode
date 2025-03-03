@@ -21,7 +21,15 @@ struct TreeNode {
 
 class Solution {
     public:
+    int getNode (TreeNode * cur){
+        if(cur == NULL) return 0;
+        int leftNode = getNode(cur -> left);
+        int rightNode = getNode (cur -> right);
+        int result = leftNode + rightNode +1;
+
+        return result;
+    }
         int countNodes(TreeNode* root) {
-            
+            return getNode(root);
         }
     };

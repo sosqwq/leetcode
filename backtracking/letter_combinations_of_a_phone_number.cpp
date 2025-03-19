@@ -12,6 +12,8 @@ using namespace std;
 
 class Solution {
     public:
+    vector<int> path;
+    vector<vector<int>> result;
         vector<string> letterCombinations(string digits) {
             
         }

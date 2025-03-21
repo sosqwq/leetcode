@@ -22,13 +22,16 @@ class Solution {
                 string str = s.substr(starIndex, i- starIndex + 1);
                 path.push_back(str);
             }
+            else {                                // 不是回文，跳过
+                continue;
+            }
             backtracking(s,i+1);
             path.pop_back();
         }
     }
     bool isPalindrome(const string & s , int start, int end){
         for(int i = start, j = end;i < j; i++, j--){
-            if(s[i] == s[j]){
+            if(s[i] != s[j]){
                 return false;
             }
         }

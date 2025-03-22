@@ -33,7 +33,8 @@ class Solution {
                     int right = nums.size()-1;
 
                     while(right > left){
-                        int sum = nums[k] + nums[j] + nums[left] + nums[right];
+                        //防止溢出，用long long;
+                        long long  sum = (long long)nums[k] + nums[j] + nums[left] + nums[right];
                         if(sum > target){
                             right --;
                         }

@@ -21,7 +21,7 @@ class Solution {
                 if(isValid(s, starIndex, i)){
                     s.insert(s.begin() + i +1 , '.');
                     pointsum += 1;
-                    backtraking(s, starIndex +2, pointsum);
+                    backtraking(s, i +2, pointsum);// 插入逗点之后下一个子串的起始位置为i+2
                     pointsum -= 1;
                     s.erase(s.begin()+1+i);
                 }

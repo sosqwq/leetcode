@@ -25,7 +25,6 @@ class Solution {
             backtracking(nums, used);
             path.pop_back();
             used[i] = false;
-
         }
     }
         vector<vector<int>> permute(vector<int>& nums) {

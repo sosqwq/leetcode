@@ -32,9 +32,33 @@ class Solution {
                 st.pop();
                 if(node-> left) st.push(node-> left);
                 if(node-> right) st.push(node-> right);
-
+ 
             }
             reverse(result.begin(),result.end());
             return result;
         }
+        /*
+                vector<int> postorderTraversal(TreeNode* root) {
+            stack<TreeNode*> st;
+            vector<int> result;
+            if(root == NULL) return result;
+            st.push(root);
+
+            while(!st.empty()){
+                TreeNode * node = st.top();
+
+                result.push_back(node-> val);
+
+                st.pop();
+                if(node-> left){
+                    st.push(node-> left);
+                } 
+                if(node-> right){ 
+                    st.push(node-> right);
+                }
+ 
+            }
+            reverse(result.begin(),result.end());
+            return result;
+        }*/
     };

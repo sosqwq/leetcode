@@ -27,7 +27,8 @@ class Solution {
                             chessboard[i][j] = k;
                             if(backtracking(chessboard)) return true;
                             chessboard[i][j] = '.';
-                        }*/
+                        }
+                    */
                     return false;
                     }
                 }

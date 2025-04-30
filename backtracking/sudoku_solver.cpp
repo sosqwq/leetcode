@@ -29,6 +29,7 @@ class Solution {
                             chessboard[i][j] = '.';
                         }
                             last day ,fight!!!
+                            
                     */
                     return false;
                     }

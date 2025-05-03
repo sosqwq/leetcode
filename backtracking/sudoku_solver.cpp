@@ -23,14 +23,7 @@ class Solution {
                             chessboard[i][j] = '.';
                         }
                     }
-                    /*if(isValid(i,j,k, chessboard)){
-                            chessboard[i][j] = k;
-                            if(backtracking(chessboard)) return true;
-                            chessboard[i][j] = '.';
-                        }
-                            last day ,fight!!!
-                            
-                    */
+
                     return false;
                     }
                 }

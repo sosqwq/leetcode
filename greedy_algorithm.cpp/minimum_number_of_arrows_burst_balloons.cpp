@@ -29,5 +29,13 @@ class Solution {
                 }
             }
             return result;
+            /*
+              int end = intervals[0][1];
+            for(int i= 1;i< intervals.size(); i++){
+                if(end <= intervals[i][0]){
+                    result += 1;
+                    end = intervals[i][1];
+                }
+            */
         }
     };

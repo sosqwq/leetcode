@@ -22,7 +22,7 @@ class Solution {
             int right = 0;
             vector<int> result;
             for(int i= 0; i< s.size(); i++){
-                right = max(right, hash[s[i]]- 'a');
+                right = max(right, hash[s[i]- 'a']);
                 if(i == right){
                     result.push_back(right -left +1);
                     left =i +1;

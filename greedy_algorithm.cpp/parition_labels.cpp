@@ -21,7 +21,7 @@ class Solution {
             int left = 0;
             int right = 0;
             vector<int> result;
-            for(int i= 0; i< s.size(); i++){
+            for(int i= 0; i< s.size(); i++){ 
                 right = max(right, hash[s[i]- 'a']);
                 if(i == right){
                     result.push_back(right -left +1);

@@ -24,7 +24,7 @@ public:
                     if(tokens[i] == "/") st.push(num1 / num2);
                 }
                 else {
-                    //stoll 将字符串 str 中的数字部分转换为 long long 整数。
+                    //stoll 将字符串 str 中的数字 转换为 long long 整数。
                     st.push(stoll(tokens[i]));
                 }
             }
